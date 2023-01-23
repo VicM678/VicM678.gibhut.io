@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Nosotros-Angélica Sedán</title>
+  </head>
+  <body>
+    <nav>
+      <img src="../img/Recurso_2.png" class="logo" />
+    </nav>
+    <div class="user hide-details" id="userBox">
+      <img src="../Imag_univ/imagen_6.jpeg" onclick="openinfo()" />
+      <div class="info">
+        <h1>Angélica Sedán</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, id!
+        </p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <a href="#">Connect with me</a>
+      </div>
+      <div class="close-icon" onclick="closeinfo()"></div>
+    </div>
+
+    <script>
+      let userBox = document.getElementById("userBox");
+
+      function openinfo() {
+        userBox.classList.remove("hide-details");
+      }
+      function closeinfo() {
+        userBox.classList.add("hide-details");
+      }
+    </script>
+  </body>
+</html>

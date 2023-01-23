@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  /* background: url(../Imag_univ/imagen_12.jpeg); */
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .log {
+  width: 80px;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-box {
+  width: 100px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 50px;
+  background: url(../Imag_univ/imagen_6.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: width 0.5s;
+}
+
+.img-box:nth-child(2) {
+  background: url(../Imag_univ/imagen_2.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box:nth-child(3) {
+  background: url(../Imag_univ/imagen_9.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box h3 {
+  color: #ffff;
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+  opacity: 0;
+  transition: botton 0.5s, opacity 0.5s;
+}
+
+.img-box:hover {
+  width: 300px;
+  cursor: pointer;
+}
+
+.img-box:hover h3 {
+  opacity: 1;
+  bottom: 25px;
+}
+
+#menuIcon {
+  width: 60px;
+  border-radius: 50%;
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-box {
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  border-bottom-left-radius: 100%;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
+}
+
+.menu-box.open-menu {
+  width: 100%;
+  height: 100vh;
+  border-bottom-left-radius: 0;
+}
+.menu-box.open-menu ul li {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 1s, opacity 1s;
+  transition-delay: 0.5s;
+}
+
+.menu-box ul li {
+  list-style: none;
+  margin: 20px;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(30px);
+}
+.menu-box ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffff;
+  font-size: 50px;
+  font-weight: 600;
+  position: relative;
+  text-shadow: 0 0 0 blue;
+  transition: text-shadow 0.5s, transform 0.5s;
+}
+.menu-box ul li a:hover {
+  text-shadow: -3px 3px 0 blue;
+  transform: translateY(-6px);
+}
+
+.menu-box ul li a::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffff;
+  position: absolute;
+  bottom: 19px;
+  right: -18px;
+  opacity: 0;
+  box-shadow: 0 0 0 blue;
+  transition: box-shadow 0.5s;
+}
+
+.menu-box ul li a:hover::after {
+  opacity: 1;
+  box-shadow: -2px 2px 0 blue;
+}
+
+.footer {
+  margin-top: 0px;
+  width: 100%;
+  padding: 100px 15%;
+  background: #333;
+  color: #efefef;
+  display: flex;
+}
+
+.footer div {
+  text-align: center;
+}
+.col-2 {
+  flex-grow: 2;
+}
+.footer div h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.col-1 a {
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons i {
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.go-top-continer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 6.6rem;
+  height: 6.6rem;
+  z-index: -1;
+}
+
+.go-top-botton {
+  width: 0rem;
+  height: 0rem;
+  background-color: azure;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: -1;
+}
+.go-top-botton i {
+  position: absolute;
+  font-size: 2.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%) scale(0);
+  color: #333;
+  transition: 0.2s;
+}
+
+.show {
+  z-index: 10;
+}
+
+.show .go-top-botton {
+  animation: popup 0.3s ease-in-out;
+  width: 3.6rem;
+  height: 3.6rem;
+  z-index: 11;
+}
+
+.show i {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+  0% {
+    width: 0rem;
+    height: 0rem;
+  }
+  50% {
+    width: 0rem;
+    height: 0rem;
+  }
+  100% {
+    width: 6.6rem;
+    height: 6.6rem;
+  }
+}

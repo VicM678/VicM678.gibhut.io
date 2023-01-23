@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universum Juris | Servicios</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9f3c91e93a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <img src="../img/Recurso_4.png" class="logo" />
+    </nav>
+    <ul class="accordion">
+      <li>
+        <input type="radio" name="accordion" id="first" checked />
+        <label for="first">Productos</label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            totam natus itaque asperiores nihil eos est excepturi assumenda
+            obcaecati provident.
+          </p>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="accordion" id="second" />
+        <label for="second">Productos</label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            totam natus itaque asperiores nihil eos est excepturi assumenda
+            obcaecati provident.
+          </p>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="accordion" id="third" />
+        <label for="third">Productos</label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            totam natus itaque asperiores nihil eos est excepturi assumenda
+            obcaecati provident.
+          </p>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="accordion" id="fourth" />
+        <label for="fourth">Productos</label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            totam natus itaque asperiores nihil eos est excepturi assumenda
+            obcaecati provident.
+          </p>
+        </div>
+      </li>
+    </ul>
+    <img src="../img/menu.png" id="menuIcon" />
+    <div class="menu-box" id="menuBox">
+      <ul>
+        <li><a href="../index.html">Inicio </a></li>
+        <li><a href="../us/nosotros.html">Nosotros </a></li>
+        <li><a href="../services/services.html">Servicios </a></li>
+        <li><a href="../contact/contactosMap.html">Contactos</a></li>
+      </ul>
+    </div>
+
+    <script>
+      let menuBox = document.getElementById("menuBox");
+      let menuIcon = document.getElementById("menuIcon");
+
+      menuIcon.onclick = function () {
+        menuBox.classList.toggle("open-menu");
+        if (menuBox.classList.contains("open-menu")) {
+          menuIcon.src = "../img/close.png";
+        } else {
+          menuIcon.src = "../img/menu.png";
+        }
+      };
+    </script>
+    <div class="footer">
+      <div class="col-1">
+        <h3></h3>
+        <a href="index.html">Inicio</a>
+        <a href="us/nosotros.html">Nosotros</a>
+        <a href="services/services.html">Servicios</a>
+        <a href="contact/contactosMap.html">Contactos</a>
+      </div>
+      <div class="col-2">
+        <h3>Universum Juris</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+      </div>
+      <div class="col-3">
+        <h3>Contactos</h3>
+        <p>
+          Dirección: 72570 Puebla de Zaragoza, México <br />
+          2228842047
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/UniversumJuris" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+    <div class="go-top-continer">
+      <div class="go-top-botton">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+    </div>
+    <script src="../js/boton.js"></script>
+  </body>
+</html>

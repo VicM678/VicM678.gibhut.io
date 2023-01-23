@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universum Juris | Contactanos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9f3c91e93a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <img src="../img/Recurso_2.png" class="logo" />
+    </nav>
+    <div class="container">
+      <h1>Locacion</h1>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6344.289397408071!2d-98.19851860169429!3d19.004864170110604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfbf61efae8f1b%3A0xab873c43091b72dd!2sR%C3%ADo%20Sabinas%205933%2C%20Jardines%20de%20San%20Manuel%2C%2072570%20Puebla%2C%20Pue.!5e0!3m2!1ses-419!2smx!4v1674189854435!5m2!1ses-419!2smx"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    }
+    <img src="../img/menu.png" id="menuIcon" />
+    <div class="menu-box" id="menuBox">
+      <ul>
+        <li><a href="../index.html">Inicio </a></li>
+        <li><a href="../us/nosotros.html">Nosotros </a></li>
+        <li><a href="../services/services.html">Servicios </a></li>
+        <li><a href="../contact/contactosMap.html">Contactos</a></li>
+      </ul>
+    </div>
+
+    <script>
+      let menuBox = document.getElementById("menuBox");
+      let menuIcon = document.getElementById("menuIcon");
+
+      menuIcon.onclick = function () {
+        menuBox.classList.toggle("open-menu");
+        if (menuBox.classList.contains("open-menu")) {
+          menuIcon.src = "../img/close.png";
+        } else {
+          menuIcon.src = "../img/menu.png";
+        }
+      };
+    </script>
+    <div class="footer">
+      <div class="col-1">
+        <h3></h3>
+        <a href="index.html">Inicio</a>
+        <a href="us/nosotros.html">Nosotros</a>
+        <a href="services/services.html">Servicios</a>
+        <a href="contact/contactosMap.html">Contactos</a>
+      </div>
+      <div class="col-2">
+        <h3>Universum Juris</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+      </div>
+      <div class="col-3">
+        <h3>Contactos</h3>
+        <p>
+          Dirección: 72570 Puebla de Zaragoza, México <br />
+          2228842047
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/UniversumJuris" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+    <div class="go-top-continer">
+      <div class="go-top-botton">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+    </div>
+    <script src="../js/boton.js"></script>
+  </body>
+</html>
